@@ -1,8 +1,14 @@
-import Navbar from "./components/Navbar";
+import {store} from './app/store'
+import {useSelector} from 'react-redux'
+import NumberForm from "./components/NumberForms";
 
 function App() {
-  return(
-    <Navbar/>
+  const numbersState = useSelector(state => state.numbers)
+  return (
+    <div>
+      <NumberForm/>
+    </div>
   );
 }
+
 export default App;
